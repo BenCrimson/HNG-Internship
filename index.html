@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benjamin's Slack Page</title>
+</head>
+<body>
+    <main style="text-align: center;">
+            <h1>Personal Data Dashboard</h1>
+            <p data-testid="slackUserName" style="font-size: 2rem;">Benjamin B</p>         
+            <img src="ben.PNG" height="40%" width="40%" alt="BenCrimson" data-testid="slackDisplayImage" style="border-radius: 30%;">
+        <section>
+            <h2 style="margin-bottom: 0;">Current Day Of The Week:</h2>
+            <p style="font-size: 2rem; margin-top: 0;"> <span id="day" data-testid="currentDayOfTheWeek"></span></p>
+        </section>
+            <h2 style="margin-bottom: 0;">Current Date and Time in UTC:</h2>
+            <p style="font-size: 2rem; margin-top: 0;"> <span id="time" data-testid="currentDayOfTheWeek"></span></p>
+        <script> 
+            const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]; 
+            const d = new Date(); 
+            let day = weekday[d.getDay()];
+            document.getElementById("day").innerHTML=day;
+            </script>
+        <script>
+            var dt = new Date ();
+            document.getElementById('time').innerHTML=dt;
+        </script>
+
+        <section>
+            <h2 style="margin-bottom: 0;">Track:</h2>
+            <p data-testid="myTrack" style="font-size: 2rem; margin-top: 0;">FRONTEND</p>
+            <p> Get The Code <a href="">Here</a></p>
+        </section>
+    </main>
+</body>
+</html>
